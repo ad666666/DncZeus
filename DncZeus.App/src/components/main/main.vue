@@ -3,13 +3,14 @@
     <Sider
       hide-trigger
       collapsible
-      :width="256"
-      :collapsed-width="64"
+      :width="180"
+      :collapsed-width="80"
       v-model="collapsed"
       class="left-sider"
       :style="{overflow: 'hidden'}"
     >
       <side-menu
+      :style="{width:collapsed?'80px':'180px'}"
         accordion
         ref="sideMenu"
         :active-name="$route.name"
@@ -97,7 +98,7 @@ export default {
       collapsed: true,
       minLogo,
       maxLogo,
-      isFullscreen: false
+      isFullscreen: false,
     };
   },
   computed: {
